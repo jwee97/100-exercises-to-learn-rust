@@ -105,6 +105,10 @@ dependencies = [
 
 [[package]]
 name = "anyhow"
+version = "0.1.0"
+
+[[package]]
+name = "anyhow"
 version = "1.0.86"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b3d1d046238990b9cf5bcde22a3fb3584ee5cf65fb2765f454ed428c7a0063da"
@@ -125,7 +129,7 @@ version = "0.1.0"
 name = "async_fn"
 version = "0.1.0"
 dependencies = [
- "anyhow",
+ "anyhow 1.0.86",
  "tokio",
 ]
 
@@ -188,7 +192,7 @@ dependencies = [
 name = "blocking"
 version = "0.1.0"
 dependencies = [
- "anyhow",
+ "anyhow 1.0.86",
  "tokio",
 ]
 
@@ -421,6 +425,9 @@ dependencies = [
 [[package]]
 name = "deps"
 version = "0.1.0"
+dependencies = [
+ "anyhow 0.1.0",
+]
 
 [[package]]
 name = "deref"
@@ -1166,7 +1173,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b45a38e19bd200220ef07c892b0157ad3d2365e5b5a267ca01ad12182491eea5"
 dependencies = [
  "ammonia",
- "anyhow",
+ "anyhow 1.0.86",
  "chrono",
  "clap",
  "clap_complete",
@@ -1199,7 +1206,7 @@ dependencies = [
 name = "mdbook-exercise-linker"
 version = "0.1.0"
 dependencies = [
- "anyhow",
+ "anyhow 1.0.86",
  "clap",
  "mdbook",
  "semver",
@@ -1725,7 +1732,7 @@ dependencies = [
 name = "runtime"
 version = "0.1.0"
 dependencies = [
- "anyhow",
+ "anyhow 1.0.86",
  "tokio",
 ]
 
@@ -1935,7 +1942,7 @@ dependencies = [
 name = "spawn"
 version = "0.1.0"
 dependencies = [
- "anyhow",
+ "anyhow 1.0.86",
  "tokio",
 ]
 
