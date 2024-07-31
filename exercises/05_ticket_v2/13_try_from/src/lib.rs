@@ -8,6 +8,25 @@ enum Status {
     Done,
 }
 
+macro_rules! try_from_str {
+    ($t:ty) => {
+        impl TryFrom<$t> for Status {
+            type Error = ();
+            fn try_from(value: $t) -> Result<Self, Self::Error> {
+                match value.to_lowercase().as_str() {
+                    "todo" => Ok(Status::ToDo),
+                    "inprogress" => Ok(Status::InProgress),
+                    "done" => Ok(Status::Done),
+                    _ => Err(()),
+                }
+            }
+        }
+    };
+}
+
+try_from_str!(String);
+try_from_str!(&str);
+
 #[cfg(test)]
 mod tests {
     use super::*;
